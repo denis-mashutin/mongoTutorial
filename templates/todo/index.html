@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Things to do:</h1>
+    <table>
+        {% for item in object_list %}
+        <tr>
+            <td>{{ item.text }}</td>
+            <td>{{ item.due_date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
