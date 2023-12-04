@@ -9,7 +9,7 @@ class AllToDos(ListView):
     template_name = "todo/index.html"
 
     def get_queryset(self):
-        return ToDoItem.objects.filter(due_date__gte=date.today())
+        return ToDoItem.objects.all()
 
 
 class TodayToDos(ListView):
